@@ -1,5 +1,7 @@
 xrdb -merge ~/.Xresources
 
+xset r rate 250 25
+
 xmodmap -e 'remove mod1 = Alt_R'
 xmodmap -e 'keycode 108 = Hangul'
 xmodmap -e 'remove control = Control_R'
