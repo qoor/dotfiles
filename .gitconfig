@@ -1,0 +1,15 @@
+[user]
+	name = MaBling
+	email = akck1202@hanmail.net
+[core]
+	editor = nvim
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = nvim -d $LOCAL $REMOTE
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+[pull]
+	rebase = true
