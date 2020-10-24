@@ -1,0 +1,10 @@
+[pull]
+	rebase = true
+[core]
+	editor = nvim
+[difftool]
+	prompt = false
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = nvim -d $LOCAL $REMOTE
