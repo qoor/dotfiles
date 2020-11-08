@@ -3,6 +3,19 @@ set number
 set autoindent
 set smartindent
 
+set showmatch
+set formatoptions+=o
+set nojoinspaces
+set backspace=indent,eol,start
+
+set nostartofline
+
+set hlsearch
+set incsearch
+set ignorecase
+set title
+set titlestring=%t%m\ (%F)
+
 " Set clipboard
 " Require to install xclip
 set clipboard+=unnamedplus
@@ -12,6 +25,12 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
 set mouse=a
+
+set signcolumn=yes
+" Prefiew replace
+set inccommand=nosplit
+
+set history=10000
 
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -25,7 +44,7 @@ set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
+set updatetime=150
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -56,6 +75,31 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme dracula
+
+autocmd vimenter * hi Normal ctermbg=NONE
+
+" Terminal mode:
+tnoremap <M-h> <C-\><C-n><C-w>h
+tnoremap <M-j> <C-\><C-n><C-w>j
+tnoremap <M-k> <C-\><C-n><C-w>k
+tnoremap <M-l> <C-\><C-n><C-w>l
+" Insert mode:
+inoremap <M-h> <Esc><C-w>h
+inoremap <M-j> <Esc><C-w>j
+inoremap <M-k> <Esc><C-w>k
+inoremap <M-l> <Esc><C-w>l
+" Visual mode:
+vnoremap <M-h> <Esc><C-w>h
+vnoremap <M-j> <Esc><C-w>j
+vnoremap <M-k> <Esc><C-w>k
+vnoremap <M-l> <Esc><C-w>l
+" Normal mode:
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " NERDTree Settings
 autocmd StdinReadPre * let s:std_in=1
