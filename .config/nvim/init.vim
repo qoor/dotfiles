@@ -99,6 +99,7 @@ nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 
+
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " NERDTree Settings
@@ -245,10 +246,16 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
 " vim-airline Settings
+let g:rainbow_active=1
+
+let g:airline_theme='dracula'
+let g:airline_powerline_fonts=1
+
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " To using buffer like tab
 nnoremap <C-S-t> :enew<Enter>
