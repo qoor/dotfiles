@@ -115,7 +115,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
+inoremap <silent><expr> <C-TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
@@ -259,7 +259,10 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " To using buffer like tab
 nnoremap <C-S-t> :enew<Enter>
-nnoremap <F29> :bprevious!<Enter> " Ctrl + F5
-nnoremap <F30> :bnext!<Enter> " Ctrl + F6
-nnoremap <F28> :bp <BAR> bd #<Enter> " Ctrl + F4
 
+nnoremap <F29> :bprevious!<Enter>	" Ctrl + F5
+nnoremap <F30> :bnext!<Enter>		" Ctrl + F6
+nnoremap <F28> :bp <BAR> bd #<Enter>	" Ctrl + F4
+nnoremap <C-F5> :bprevious!<Enter>	" Ctrl + F5
+nnoremap <C-F6> :bnext!<Enter>		" Ctrl + F6
+nnoremap <C-F4> :bp <BAR> bd #<Enter>	" Ctrl + F4
