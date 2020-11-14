@@ -2,6 +2,10 @@ theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
+block = "focused_window"
+max_width = 40
+
+[[block]]
 block = "disk_space"
 path = "/"
 alias = "/"
@@ -10,6 +14,11 @@ unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
+
+[[block]]
+block = "net"
+device = "eth0"
+interval = 3
 
 [[block]]
 block = "memory"
@@ -28,6 +37,7 @@ format = "{1m}"
 
 [[block]]
 block = "sound"
+step_width = 3
 
 [[block]]
 block = "time"
