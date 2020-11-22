@@ -70,6 +70,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sleuth'
 
 " Initialize plugin system
 call plug#end()
