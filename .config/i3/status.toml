@@ -17,7 +17,7 @@ alert = 10.0
 
 [[block]]
 block = "net"
-device = "eth0"
+device = "enp0s25"
 interval = 3
 
 [[block]]
