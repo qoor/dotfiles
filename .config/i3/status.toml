@@ -23,7 +23,15 @@ alert = 10.0
 
 [[block]]
 block = "net"
+<<<<<<< HEAD
 device = "wlan0"
+=======
+<<<<<<< HEAD
+device = "enp0s25"
+=======
+device = "wlan0"
+>>>>>>> c35a5d6 (Added battery/network status show in i3)
+>>>>>>> main
 interval = 3
 
 [[block]]
