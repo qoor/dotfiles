@@ -6,6 +6,12 @@ block = "focused_window"
 max_width = 40
 
 [[block]]
+block = "battery"
+device = "BAT1"
+interval = 10
+format = "{percentage}% {time}"
+
+[[block]]
 block = "disk_space"
 path = "/"
 alias = "/"
@@ -17,7 +23,7 @@ alert = 10.0
 
 [[block]]
 block = "net"
-device = "enp0s25"
+device = "wlan0"
 interval = 3
 
 [[block]]
