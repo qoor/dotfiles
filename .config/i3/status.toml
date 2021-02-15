@@ -24,6 +24,7 @@ alert = 10.0
 [[block]]
 block = "net"
 device = "wlan0"
+format = ""
 interval = 3
 
 [[block]]
