@@ -72,7 +72,6 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sleuth'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jiangmiao/auto-pairs'
 
 " Initialize plugin system
 call plug#end()
@@ -83,6 +82,8 @@ autocmd vimenter * hi Normal ctermbg=NONE
 
 map <C-j> <Nop>
 map <C-k> <Nop>
+
+inoremap <>
 
 " Terminal mode:
 tnoremap <M-h> <C-\><C-n><C-w>h
