@@ -120,11 +120,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-"inoremap <silent><expr> <TAB>
-"      \ pumvisible() ? "\<C-n>" :
-"      \ <SID>check_back_space() ? "\<TAB>" :
-"      \ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -277,9 +274,3 @@ nnoremap <C-F4> :bp <BAR> bd #<Enter>	" Ctrl + F4
 
 " Screen glitch fix if launched directly
 autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
-
-" Ignore popup window using arrow keys
-inoremap <expr> <Up> pumvisible() ? "\<C-e><Up>" : "\<Up>"
-inoremap <expr> <Down> pumvisible() ? "\<C-e><Down>" : "\<Down>"
-inoremap <expr> <Left> pumvisible() ? "\<C-e><Left>" : "\<Left>"
-inoremap <expr> <Right> pumvisible() ? "\<C-e><Right>" : "\<Right>"
