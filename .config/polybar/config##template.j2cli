@@ -69,7 +69,11 @@ font-5 = "Hack Nerd Font:size=10:style=bold;1"
 modules-left = i3 browser-btn
 ;modules-center = mpd
 modules-center =
-modules-right = xwindow pulseaudio cpu memory eth date powermenu {% if YADM_CLASS in ["laptop", "work"] %}wlan battery{% endif %}
+{% if YADM_CLASS in ["laptop", "work"] -%}
+modules-right = xwindow battery pulseaudio cpu memory eth wlan date powermenu
+{%- else -%}
+modules-right = xwindow pulseaudio cpu memory eth date powermenu
+{%- endif %}
 
 tray-position = ${env:TRAY_POSITION:right}
 tray-padding = 2
