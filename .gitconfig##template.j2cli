@@ -1,6 +1,10 @@
 [user]
 	name = MaBling
+{%- if YADM_CLASS == "work" %}
+	email = swma@markany.com
+{% else %}
 	email = akck1202@hanmail.net
+{% endif -%}
 [core]
 	editor = nvim
 [diff]
