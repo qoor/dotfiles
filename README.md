@@ -15,8 +15,10 @@ Qoo's handmade user dotfiles.
 
 ## Targets
 - alacritty (`.config/alacritty/`)
-- gtk-3.0 (`.config/gtk-3.0`)
+- git (`.gitconfig`)
+- gtk-3.0 (`.config/gtk-3.0/`)
 - i3-wm (`.config/i3/`)
+- neovim (`.config/nvim/`)
 - polybar (`.config/polybar/`)
 - HancomGooroom 2.0
   - Google Chrome flags (`.local/bin/`, `.local/share/applications/google-chrome.desktop`)
@@ -24,6 +26,7 @@ Qoo's handmade user dotfiles.
 - TmaxOS
   - Shell language (`UserData/locale.conf`)
 - tmux (`.tmux.conf`, `.tmux/plugins/`)
+- yadm (`.config/yadm/bootstrap`)
 - zsh (`.zshrc`)
 
 ## Getting Started
