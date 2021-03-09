@@ -57,14 +57,14 @@ padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = Hack:size=10;1
-font-1 = Hack:size=10;1
-font-2 = Hack:size=10;1
-font-3 = "Hack Nerd Font:size=10;1"
-font-4 = "D2Coding:size=10;1"
-font-5 = "Hack Nerd Font:size=10:style=bold;1"
+font-0 = Hack:size=11;1
+font-1 = Hack:size=11;1
+font-2 = Hack:size=11;1
+font-3 = "Hack Nerd Font:size=11;1"
+font-4 = "D2Coding:size=11;1"
+font-5 = "Hack Nerd Font:size=11:style=bold;1"
 
 modules-left = i3 browser-btn
 ;modules-center = mpd
@@ -261,7 +261,11 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
+{% if YADM_DISTRO == "Arch" -%}
+interface = wlan0
+{%- else -%}
 interface = wlp2s0
+{%- endif %}
 interval = 3.0
 
 format-connected = <label-connected>
@@ -284,7 +288,11 @@ ramp-signal-font = 4
 
 [module/eth]
 type = internal/network
+{% if YADM_CLASS == "work" -%}
 interface = enp3s0
+{%- else -%}
+interface = enp0s25
+{%- endif %}
 interval = 3.0
 
 format-connected-underline = #55aa55
