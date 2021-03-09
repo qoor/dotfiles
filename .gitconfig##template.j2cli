@@ -1,8 +1,9 @@
 [user]
-	name = MaBling
 {%- if YADM_CLASS == "work" %}
+	name = MaBling
 	email = swma@markany.com
 {% else %}
+	name = Qoo
 	email = akck1202@hanmail.net
 {% endif -%}
 [core]
