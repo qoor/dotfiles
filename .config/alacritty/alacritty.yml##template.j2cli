@@ -361,7 +361,11 @@ live_config_reload: true
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
+  {% if YADM_CLASS == "work" -%}
   program: /usr/bin/tmux
+  {%- else -%}
+  program: /usr/bin/zsh
+  {%- endif %}
 #  args:
 #    - --login
 
