@@ -1,0 +1,10 @@
+{
+	"clangd.semanticHighlighting": true,
+	{% if YADM_CLASS == "work" -%}
+	"clangd.arguments": [
+		"--header-insertion=never"
+	],
+	{%- endif %}
+
+	"cmake.lsp.enable": true
+}
