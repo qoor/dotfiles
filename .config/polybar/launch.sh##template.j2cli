@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+{% if YADM_OS == "Arch" -%}
+tray_output=eDP1
+{% else %}
+tray_output=eDP-1
+{%- endif %}
+
+if type "xrandr"; then
+  export TRAY_POSITION=none
+
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    {% if YADM_OS == "Arch" -%}
+    if [[ $m == 'HDMI1' ]]; then
+      tray_output=HDMI1
+    {%- else -%}
+    if [[ $m == 'HDMI-1' ]]; then
+      tray_output=HDMI-1
+    {%- endif %}
+    fi
+
+    if [[ $m == $tray_output ]]; then
+      TRAY_POSITION=right
+    else
+      TRAY_POSITION=none
+    fi
+
+    MONITOR=$m polybar i3bar &
+  done
+else
+  polybar i3bar &
+fi
+
+echo "Polybar launched..."
