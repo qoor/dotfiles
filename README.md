@@ -2,6 +2,30 @@
 ## What is this?
 Qoo's handmade user dotfiles.
 
+## Requirements
+- Linux
+  |Support Linux Distributors|
+  |---|
+  |Arch|
+  |HancomGooroom|
+  |TmaxOS|
+
+- yadm 3.0 or higher
+- j2cli
+
+## Targets
+- alacritty (`.config/alacritty/`)
+- gtk-3.0 (`.config/gtk-3.0`)
+- i3-wm (`.config/i3/`)
+- polybar (`.config/polybar/`)
+- HancomGooroom 2.0
+  - Google Chrome flags (`.local/bin/`, `.local/share/applications/google-chrome.desktop`)
+- powerlevel10k (`.p10k.zsh`)
+- TmaxOS
+  - Shell language (`UserData/locale.conf`)
+- tmux (`.tmux.conf`, `.tmux/plugins/`)
+- zsh (`.zshrc`)
+
 ## Getting Started
 ### 1. Setting your class
 ```shell
