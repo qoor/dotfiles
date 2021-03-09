@@ -1,4 +1,4 @@
-{% if YADM_CLASS == work -%}
+{% if YADM_CLASS == "work" -%}
 export LANG=en_US.UTF-8
 export SHELL=/bin/zsh
 {%- endif %}
