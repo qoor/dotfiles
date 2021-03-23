@@ -1,0 +1,26 @@
+#!/bin/bash
+
+CONF=(
+	--with-gif
+	--with-tiff
+	--with-gnutls
+	--with-json
+	--with-sound=alsa
+	--with-modules
+	--without-gconf
+	--without-gsettings
+	--with-native-compilation
+)
+
+CONF+=( '--with-cairo' );
+CONF+=( '--with-xwidgets' );
+CONF+=( '--with-mailutils' );
+CONF+=( '--without-compress-install' );
+
+CFLAGS="-g -march=native -O2"
+
+echo "CFLAGS: $CFLAGS"
+echo "CONF: ${CONF[@]}"
+
+cd emacs
+./configure "CFLAGS=$CFLAGS" "${CONF[@]}"
