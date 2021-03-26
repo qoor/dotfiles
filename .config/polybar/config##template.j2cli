@@ -261,7 +261,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-{% if YADM_DISTRO == "Arch" -%}
+{% if YADM_DISTRO == "arch" -%}
 interface = wlan0
 {%- else -%}
 interface = wlp2s0
