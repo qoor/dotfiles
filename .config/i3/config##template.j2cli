@@ -19,7 +19,7 @@ set $right l
 # Your preferred application launcher
 # Note: pass the final command to i3-msg so that the resulting window can be opened
 # on the original worksapce that the command was run on.
-set $menu j4-dmenu-desktop --dmenu='bemenu -i --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 12"' --term='alacritty'| xargs i3-msg exec --
+set $menu rofi -show drun -show-icons | xargs i3-msg exec --
 
 focus_follows_mouse no
 
