@@ -1,6 +1,6 @@
 {% if YADM_CLASS in ["work", "desktop"] -%}
 Xft.dpi: 96
-{%- else -%}
+{% else -%}
 Xft.dpi: 120
 {% endif -%}
 Emacs*useXIM: false
