@@ -165,7 +165,7 @@ assign [class="^Emacs$"]                $ws3
 assign [class="^(?i)libreoffice-*"]     $ws5
 assign [class="hwp"]                    $ws5
 assign [class="^h.*viewer$"]            $ws5
-assign [class="^PulseUi$"]              $ws10
+assign [class="^PulseU[iI]$"]           $ws10
 
 for_window [class="kakaotalk.exe"]      floating enable
 
